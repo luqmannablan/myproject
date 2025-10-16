@@ -7,5 +7,5 @@ from .models import Project
 
 def projects_list(request):
 
-    projectItem = Project.objects.all().order_by()
+    projectItem = Project.objects.all().order_by('-startdate')
     return render(request, 'projects/projects_list.html', {'projects': projectItem})

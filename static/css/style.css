@@ -169,3 +169,45 @@ a:hover {
 .logout-button:hover {
     opacity: 0.75;
 }
+
+.skill {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #1e40af;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin: 3px;
+    font-size: 0.9em;
+}
+
+.project {
+    margin: 1.5rem 0;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    /* deep gray to match your dark background */
+    border: 1px solid #2f2f2f;
+    /* subtle outline */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Add a gentle hover effect */
+.project:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    border-color: #44B78B55;
+    /* soft green tint on hover */
+}
+
+/* Optional inner accent line at the top */
+.project::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #44B78B, #81dbb8);
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+}

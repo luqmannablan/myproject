@@ -13,7 +13,19 @@
         {%for project in projects%}
 
         <article class="project">
-            <h2>{{projects.company}} </h2>
+            <h2>{{project.company}}         </h2>
+            <h3>{{project.jobtitle}}
+            <p>{{project.startdate}} - {{project.enddate}}<p> 
+            <br />
+            <p>{{project.description}}</p>
+            <br />
+            <p> skills:
+                {%for skill in project.skills%}
+                    <span class="skill">{{skill}} </span>
+                {% endfor %}
+            </p>
+        
+            
         </article>
 
         {% endfor %}
