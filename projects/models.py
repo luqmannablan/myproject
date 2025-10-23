@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 class Project(models.Model):
 
     company = models.CharField(max_length=75)
+    projectname = models.CharField(max_length=75, null=True)
     jobtitle = models.CharField(max_length=75, default="", blank=True)
     description = models.TextField()
     skills = models.JSONField(default=list)

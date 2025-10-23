@@ -13,7 +13,13 @@
         {%for project in projects%}
 
         <article class="project">
-            <h2>{{project.company}}         </h2>
+            <h2>
+                {%if not project.projectname%}
+                    {{project.company}}
+                {% else%}
+                    {{project.projectname}}
+                {% endif%}
+            </h2>
             <h3>{{project.jobtitle}}
             <p>{{project.startdate}} - {{project.enddate}}<p> 
             <br />
