@@ -24,7 +24,7 @@ def projects_form(request):
             newProject.author = request.user
             newProject.save()
 
-            return redirect('projects:projects-list')
+            return redirect('projects:projects-lists')
     else:
         form = forms.createProject()
 
