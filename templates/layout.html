@@ -21,6 +21,7 @@
         {% if user.is_authenticated %}
             <a href="{% url 'posts:new-post' %}">New Post</a> |
             <a href="{% url 'projects:projects-lists' %}">Projects</a> |
+            <a href="{% url 'projects:projects-form' %}"> Add Project </a> |
             <form class="logout" action ="{%url 'users:logout' %}" method="post">
                 {% csrf_token %}
                 <button class="logout-button" aria-label="User Logout" title="User Logout">Logout</button>

@@ -10,6 +10,11 @@
 {% block content %}
     <section> 
         <h1>Add Project</h1>
+        <form class="form-with-validation" action="{% url 'projects:projects-form' %}" method="project" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <button class="form-submit"> Add Project </button>
+        </form>
     </section>
     
 {% endblock content %}
